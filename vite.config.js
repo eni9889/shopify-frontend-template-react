@@ -50,6 +50,9 @@ export default defineConfig({
   },
   resolve: {
     preserveSymlinks: true,
+    alias: {
+      '@shopify/post-purchase-ui-extensions-react': '@shopify/post-purchase-ui-react',
+  }
   },
   server: {
     host: "localhost",

@@ -2,6 +2,8 @@ import { BrowserRouter } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { NavigationMenu } from "@shopify/app-bridge-react";
 import Routes from "./Routes";
+import {Context} from '@shopify/post-purchase-ui-react/ui-extensions';
+import {Text} from '@shopify/post-purchase-ui-react';
 
 import {
   AppBridgeProvider,
@@ -20,6 +22,9 @@ export default function App() {
       <BrowserRouter>
         <AppBridgeProvider>
           <QueryProvider>
+            <Context>
+              <Text>I can safely use UI components now!</Text>
+            </Context>
             <NavigationMenu
               navigationLinks={[
                 {
